@@ -31,3 +31,6 @@ Train a new model
 -----------------
 1. Construct dataset following [origin guide](https://github.com/bgshih/crnn#train-a-new-model). If you want to train with variable length images (keep the origin ratio for example), please modify the `tool/create_dataset.py` and sort the image according to the text length.
 2. Execute ``python train.py --adadelta --trainRoot {train_path} --valRoot {val_path} --cuda``. Explore ``train.py`` for details.
+
+--
+Note: create and read lmdb python code is very old(python2-based), their code should be modified by using pyarrow. 
